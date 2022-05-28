@@ -21,17 +21,15 @@ function myFunction() {
   }. ${tituloArt.value.bold()}. ${url.value}. Acesso em: ${data.value}.`;
 }
 
+document.getElementById("copiar").addEventListener("click", copiar);
+
 function copiar() {
-  /* Get the text field */
   var copyText = document.getElementById("demo");
-
-  /* Select the text field */
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); /* For mobile devices */
-
-  /* Copy the text inside the text field */
-  navigator.clipboard.writeText(copyText.value);
-
-  /* Alert the copied text */
-  alert("Copied the text: " + copyText.value);
+  var textArea = document.createElement("textarea");
+  textArea.value = copyText.textContent;
+  document.body.appendChild(textArea);
+  textArea.select();
+  document.execCommand("Copy");
+  textArea.remove();
+  alert("texto copiado");
 }

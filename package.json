@@ -9,6 +9,7 @@
   "author": "Arthur Martins",
   "license": "ISC",
   "dependencies": {
-    "moment": "^2.29.3"
+    "moment": "^2.29.3",
+    "sentence-case": "^3.0.4"
   }
 }
