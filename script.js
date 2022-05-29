@@ -21,7 +21,8 @@ element.addEventListener("click", myFunction);
 //   data.getDate() + " " + meses[data.getMonth()] + " " + data.getFullYear();
 // console.log(dataFormatada);
 
-function myFunction() {
+function myFunction(event) {
+  event.preventDefault()
   document.getElementById(
     "demo"
   ).innerHTML = `${sobrenome.value.toUpperCase()}, ${
